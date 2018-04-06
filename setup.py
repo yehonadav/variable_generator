@@ -13,7 +13,6 @@ with io.open('variable_generator/__init__.py', 'rt', encoding='utf8') as f:
 setup(
     name='variable_generator',
     version=version,
-    url='https://www.yehonadavprojects.com/p/variable_generator/',
     license='BSD',
     author='Yehonadav Bar Elan',
     author_email='yonadav.barilan@gmail.com',
