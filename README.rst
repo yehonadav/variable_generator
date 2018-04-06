@@ -6,6 +6,7 @@ It is designed as a service to be used by other programs
 that would parse through data and need to translate that data to usable python code.
 
 Installing
+
 Install and update using pip:
 
 pip install -U variable_generator
