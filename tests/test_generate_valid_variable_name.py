@@ -1,5 +1,6 @@
 import unittest
-from src.variable_generator.name_generator import generate_valid_variable_name, valids
+
+from variable_generator.name_generator import generate_valid_variable_name, valids
 
 
 class TestGenerationOfValidVariableNames(unittest.TestCase):
