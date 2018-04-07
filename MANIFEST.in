@@ -1,11 +1,5 @@
-include Makefile CHANGES.rst LICENSE AUTHORS tox.ini
+include Makefile LICENSE tox.ini
 
-graft artwork
 graft tests
-graft examples
-graft docs
 
 global-exclude *.py[co]
-
-prune docs/_build
-prune docs/_themes

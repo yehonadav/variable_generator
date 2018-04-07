@@ -13,6 +13,7 @@ with io.open('variable_generator/__init__.py', 'rt', encoding='utf8') as f:
 setup(
     name='variable_generator',
     version=version,
+    url='https://github.com/yehonadav/variable_generator',
     license='BSD',
     author='Yehonadav Bar Elan',
     author_email='yonadav.barilan@gmail.com',
@@ -20,16 +21,10 @@ setup(
     maintainer_email='yonadav.barilan@gmail.com',
     description='A small module to support automation of generating valid python variable names from external data.',
     long_description=readme,
-    packages=['variable_generator', 'variable_generator.json'],
+    packages=['variable_generator'],
     include_package_data=True,
     zip_safe=False,
     platforms='any',
-    install_requires=[
-        'Werkzeug>=0.14',
-        'Jinja2>=2.10',
-        'itsdangerous>=0.24',
-        'click>=5.1',
-    ],
     extras_require={
         'dotenv': ['python-dotenv'],
         'dev': [
