@@ -1,6 +1,6 @@
 import unittest
 
-from variable_generator.name_generator import generate_valid_variable_name, valids
+from variable_generator.name_generator import generate_valid_variable_name, valids, generate_valid_variable_names
 
 
 class TestGenerationOfValidVariableNames(unittest.TestCase):
@@ -85,6 +85,17 @@ class TestGenerationOfValidVariableNames(unittest.TestCase):
         self.assertEqual(generate_valid_variable_name(self.testing_data['string20']), self.expected_results[17])
         self.assertEqual(generate_valid_variable_name(self.testing_data['string21']), self.expected_results[18])
         self.assertEqual(generate_valid_variable_name(self.testing_data['string22']), self.expected_results[18])
+
+    def test_generate_valid_variable_names(self):
+        raw_name = self.testing_data['string15']
+        raw_names = [raw_name]*10
+        expected_result = generate_valid_variable_name(raw_name)
+        expected_results = [expected_result]
+        for i in range(9):
+            expected_results.append(expected_result + str(i+2))
+        names = generate_valid_variable_names(raw_names)
+        for i in range(len(expected_results)):
+            self.assertEqual(names[i], expected_results[i])
 
 
 if __name__ == '__main__':

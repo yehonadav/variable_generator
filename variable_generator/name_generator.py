@@ -157,3 +157,23 @@ def generate_valid_variable_name(string: str):
 
     # add "num" if name starts with a number
     return render_if_string_starts_with_a_number(string)
+
+
+def generate_valid_variable_names(raw_names: list):
+    """
+    :rtype: list
+    """
+    names = set()
+    results = []
+    for raw_name in raw_names:
+        name = generate_valid_variable_name(raw_name)
+        if name in names:
+            i = 2
+            origin = name
+            name += str(i)
+            while name in names:
+                i += 1
+                name = origin + str(i)
+        names.add(name)
+        results.append(name)
+    return results
